@@ -8,7 +8,7 @@
   }
   :not(h1, h2, h3, h4, h5, h6) {
     font-family: "Inter", sans-serif;
-    @apply text-[16px] sm:max-xl:text-[24px];
+    @apply text-[15px] sm:max-xl:text-[24px];
   }
   h1,
   h2,
