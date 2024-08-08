@@ -1,34 +1,31 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+    <div className="w-full min-h-screen flex justify-between gap-x-6">
+      <aside className="max-w-[240px] w-full h-screen sticky top-0 bottom-0 left-0 z-[100] p-4 bg-cust-black">
+        <h1 className="text-cust-yellow">
+          Xenpos
+        </h1>
+      </aside>
+      <div className="flex-1 min-h-screen">
+        <p className="mb-20">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellat amet maxime voluptatum? Necessitatibus sint, consectetur doloribus aliquam est eligendi similique voluptatem fugiat temporibus sequi labore tempora, aut cum at?
         </p>
+        <p className="mb-20">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellat amet maxime voluptatum? Necessitatibus sint, consectetur doloribus aliquam est eligendi similique voluptatem fugiat temporibus sequi labore tempora, aut cum at?
+        </p>
+        <p className="mb-20">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellat amet maxime voluptatum? Necessitatibus sint, consectetur doloribus aliquam est eligendi similique voluptatem fugiat temporibus sequi labore tempora, aut cum at?
+        </p>
+        <p className="mb-20">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellat amet maxime voluptatum? Necessitatibus sint, consectetur doloribus aliquam est eligendi similique voluptatem fugiat temporibus sequi labore tempora, aut cum at?
+        </p>
+        <p className="mb-20">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis repellat amet maxime voluptatum? Necessitatibus sint, consectetur doloribus aliquam est eligendi similique voluptatem fugiat temporibus sequi labore tempora, aut cum at?
+        </p>
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
