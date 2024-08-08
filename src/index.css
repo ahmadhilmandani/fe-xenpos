@@ -29,4 +29,16 @@
   h3 {
     @apply text-[20px] xl:text-[16px] sm:max-xl:text-[48px] font-bold;
   }
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-cust-gray-darker/25;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-cust-gray-darker rounded-md hover:bg-cust-gray-darker/40;
+  }
 }
