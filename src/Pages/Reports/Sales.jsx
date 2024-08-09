@@ -30,11 +30,9 @@ export default function Sales() {
 
 
               <ul className={`${openOutletOpt ? 'block' : 'hidden'} absolute left-0 z-10 mt-2 w-36 bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
-                <div className="py-1" role="none">
-                  <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-0">Account settings</li>
-                  <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-1">Support</li>
-                  <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-2">License</li>
-                </div>
+                <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-0">Account settings</li>
+                <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-1">Support</li>
+                <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-2">License</li>
               </ul>
             </div>
           </div>
@@ -55,7 +53,7 @@ export default function Sales() {
         <section className="mt-4 bg-white flex">
           {/* sub menu option of sales */}
           <div className="border-r w-[20%]">
-            <div className={`${selectedSubMenu.sales ? 'bg-cust-gray' : ''} p-4 cursor-pointer`} onClick={() => {
+            <div className={`${selectedSubMenu.sales ? 'bg-cust-gray' : 'hover:bg-cust-gray/20'} p-4 cursor-pointer`} onClick={() => {
               setSelectedSubMenu({
                 sales: true,
                 profit: false,
@@ -64,7 +62,7 @@ export default function Sales() {
             }}>
               Sales Summary
             </div>
-            <div className={`${selectedSubMenu.profit ? 'bg-cust-gray' : ''} p-4 cursor-pointer`} onClick={() => {
+            <div className={`${selectedSubMenu.profit ? 'bg-cust-gray' : 'hover:bg-cust-gray/20'} p-4 cursor-pointer`} onClick={() => {
               setSelectedSubMenu({
                 sales: false,
                 profit: true,
@@ -73,7 +71,7 @@ export default function Sales() {
             }}>
               Gross Profit
             </div>
-            <div className={`${selectedSubMenu.item ? 'bg-cust-gray' : ''} p-4 cursor-pointer`} onClick={() => {
+            <div className={`${selectedSubMenu.item ? 'bg-cust-gray' : 'hover:bg-cust-gray/20'} p-4 cursor-pointer`} onClick={() => {
               setSelectedSubMenu({
                 sales: false,
                 profit: false,
