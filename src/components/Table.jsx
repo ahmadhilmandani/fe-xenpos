@@ -1,9 +1,9 @@
-/* eslint-disable react/prop-types */
 /* eslint-disable no-constant-condition */
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
+import PropTypes from 'prop-types'
 
-// eslint-disable-next-line no-unused-vars
-export default function Table({ tableHeader, tableBody, displayShowEntries = true, displaySearchBar = true}) {
+
+export default function Table({ tableHeader, children, displayShowEntries = true, displaySearchBar = true }) {
   return (
     <>
       <div className="mb-5 flex justify-between items-center">
@@ -41,35 +41,17 @@ export default function Table({ tableHeader, tableBody, displayShowEntries = tru
         <table className="w-full">
           <thead className="bg-cust-gray/20 border-b-2 border-cust-gray">
             <tr>
-              <th className="w-24 p-3 font-semibold tracking-wide text-left">Item Name</th>
-              <th className="w-24 p-3 font-semibold tracking-wide text-left">Category</th>
-              <th className="w-24 p-3 font-semibold tracking-wide text-left">Item Sold</th>
-              <th className="w-24 p-3 font-semibold tracking-wide text-left">Item Refund</th>
-              <th className="w-24 p-3 font-semibold tracking-wide text-left">Gross Sales</th>
-              <th className="w-24 p-3 font-semibold tracking-wide text-left">Discount</th>
-              <th className="w-24 p-3 font-semibold tracking-wide text-left">Refund</th>
-              <th className="w-24 p-3 font-semibold tracking-wide text-left">Net Sales</th>
-              <th className="w-24 p-3 font-semibold tracking-wide text-left">COGS</th>
-              <th className="w-32 p-3 font-semibold tracking-wide text-left">Gross Profit</th>
+              {tableHeader.map((valOfTabHead) => {
+                return (
+                  <>
+                    <th className="w-32 p-3 font-semibold tracking-wide text-left">{valOfTabHead}</th>
+                  </>
+                )
+              })}
             </tr>
           </thead>
           <tbody className="divide-y divide-cust-gray">
-            <tr>
-              <td className="p-3 text-gray-700 whitespace-nowrap">
-                Kring New Fit office chair, mesh + PU, black
-              </td>
-              <td className="p-3 text-gray-700 whitespace-nowrap">
-                Manis
-              </td>
-              <td className="p-3 text-gray-700 whitespace-nowrap">16</td>
-              <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 100.000.000</td>
-              <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 10.000</td>
-              <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 5.000</td>
-              <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 5.000</td>
-              <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 5.000</td>
-              <td className="p-3 text-gray-700 whitespace-nowrap">$200.00</td>
-              <td className="p-3 text-gray-700 whitespace-nowrap">$200.00</td>
-            </tr>
+            {children}
           </tbody>
         </table>
       </div>
@@ -90,4 +72,11 @@ export default function Table({ tableHeader, tableBody, displayShowEntries = tru
       </div>
     </>
   )
+}
+
+Table.propTypes = {
+  tableHeader: PropTypes.array,
+  children: PropTypes.any,
+  displayShowEntries: PropTypes.bool,
+  displaySearchBar: PropTypes.bool
 }

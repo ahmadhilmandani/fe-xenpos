@@ -8,6 +8,7 @@ pnpm-debug.log*
 lerna-debug.log*
 
 view.zip
+view1.zip
 node_modules
 dist
 dist-ssr
