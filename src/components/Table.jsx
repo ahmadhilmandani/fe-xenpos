@@ -1,9 +1,16 @@
 /* eslint-disable no-constant-condition */
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import PropTypes from 'prop-types'
+import Dropdown from "./Dropdown";
+import { useState } from "react";
 
 
 export default function Table({ tableHeader, children, displayShowEntries = true, displaySearchBar = true }) {
+  const [openEntries, setOpenEntries] = useState(false)
+  const [selectedEntries, setSelectedEntries] = useState({
+    value: 50,
+    name: 50
+  })
   return (
     <>
       <div className="mb-5 flex justify-between items-center">
@@ -11,22 +18,31 @@ export default function Table({ tableHeader, children, displayShowEntries = true
           <div>
             Show
           </div>
-          <div className="relative text-left">
-            <div>
-              <button type="button" className="inline-flex w-full justify-center gap-x-1.5 text-cust-gray-darker/85 py-2 font-semibold border-b border-cust-gray-darker/85 hover:border-cust-black hover:text-cust-black transition-all" id="menu-button" aria-expanded="true" aria-haspopup="true">
-                50
-                <svg className="-mr-1 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clipRule="evenodd" />
-                </svg>
-              </button>
-            </div>
-            <ul className={`${1 == 0 ? 'block' : 'hidden'} absolute left-0 z-10 mt-2 w-36 bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`} role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabIndex="-1">
-              <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-0">10s</li>
-              <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-1">25</li>
-              <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-1">50</li>
-              <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-2">75</li>
-              <li href="#" className="block cursor-pointer hover:bg-cust-bg-gray px-4 py-2 text-sm text-gray-700 hyphens-auto" role="menuitem" tabIndex="-1" id="menu-item-2">100</li>
-            </ul>
+          <div className="w-14">
+            <Dropdown
+              openDropdown={openEntries}
+              setOpenDropdown={() => { setOpenEntries(!openEntries) }}
+              selectedOpt={selectedEntries}
+              setSelectedOpt={setSelectedEntries}
+              option={[
+                {
+                  value: 10,
+                  name: 10
+                },
+                {
+                  value: 25,
+                  name: 25
+                },
+                {
+                  value: 50,
+                  name: 50
+                },
+                {
+                  value: 100,
+                  name: 100
+                },
+              ]}
+            />
           </div>
           <div>
             entries
