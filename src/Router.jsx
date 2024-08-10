@@ -5,6 +5,7 @@ import Sales from "./Pages/Reports/Sales";
 import Transaction from "./Pages/Reports/Transaction";
 import Refund from "./Pages/Reports/Refund";
 import Shift from "./Pages/Reports/Shift";
+import ShiftByName from "./Pages/Reports/ShiftByName";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       {
         path: "/shift",
         element: <Shift />,
+      },
+      {
+        path: "/shift-by-name",
+        element: <ShiftByName />,
       },
     ]
   },

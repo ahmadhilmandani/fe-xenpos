@@ -45,7 +45,7 @@ export default function Sidebar() {
       </button>
 
       {/* Sub-item of Report (open only if sideItemOpen.report true) */}
-      <div className={`${sideItemOpen.report ? 'h-[240px]' : 'h-0'} overflow-hidden transition-all`}>
+      <div className={`${sideItemOpen.report ? 'h-[260px]' : 'h-0'} overflow-hidden transition-all`}>
         <NavLink to="/sales" className={({ isActive }) =>
           isActive
             ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
@@ -86,7 +86,7 @@ export default function Sidebar() {
             Shift
           </div>
         </NavLink>
-        <NavLink to="/" className={({ isActive }) =>
+        <NavLink to="/shift-by-name" className={({ isActive }) =>
           isActive
             ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
             : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
