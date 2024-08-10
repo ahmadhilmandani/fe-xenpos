@@ -62,7 +62,7 @@ export default function Sales() {
             </div>
           </div>
         </section>
-        <section className="mt-4 bg-white flex">
+        <section className="mt-8 bg-white flex">
           {/* sub menu option of sales */}
           <div className="border-r w-[20%]">
             <div className={`${selectedSubMenu.sales ? 'bg-cust-gray' : 'hover:bg-cust-gray/20'} p-4 cursor-pointer`} onClick={() => {

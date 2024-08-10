@@ -1,7 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import Dashboard from "./Pages/Reports/Dashboard";
+import Dashboard from "./Pages/Dashboard";
 import MainLayout from "./layouts/MainLayouts";
 import Sales from "./Pages/Reports/Sales";
+import Transaction from "./Pages/Reports/Transaction";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       {
         path: "/sales",
         element: <Sales />,
+      },
+      {
+        path: "/transaction",
+        element: <Transaction />,
       },
     ]
   },

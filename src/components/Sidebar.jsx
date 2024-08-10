@@ -56,7 +56,7 @@ export default function Sidebar() {
             Sales
           </div>
         </NavLink>
-        <NavLink to="/" className={({ isActive }) =>
+        <NavLink to="/transaction" className={({ isActive }) =>
           isActive
             ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
             : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
