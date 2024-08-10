@@ -3,6 +3,7 @@ import Dashboard from "./Pages/Dashboard";
 import MainLayout from "./layouts/MainLayouts";
 import Sales from "./Pages/Reports/Sales";
 import Transaction from "./Pages/Reports/Transaction";
+import Refund from "./Pages/Reports/Refund";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/transaction",
         element: <Transaction />,
+      },
+      {
+        path: "/refund",
+        element: <Refund />,
       },
     ]
   },
