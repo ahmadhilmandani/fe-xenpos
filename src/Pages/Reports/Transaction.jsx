@@ -101,16 +101,7 @@ export default function Transaction() {
             Transactions Table
           </h2>
           <Table tableHeader={[
-            "Item Name",
-            "Category",
-            "Item Sold",
-            "Item Refund",
-            "Gross Sales",
-            "Discount",
-            "Refund",
-            "Net Sales",
-            "COGS",
-            "Gross Profit",
+            "Date",	"Time",	"Receipt",	"Shift",	"Item",	"Total", "Price",	"Payment",	"Action"
           ]}>
             <tr>
               <td className="p-3 text-gray-700 whitespace-nowrap">
