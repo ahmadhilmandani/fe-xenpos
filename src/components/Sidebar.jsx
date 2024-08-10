@@ -9,7 +9,7 @@ export default function Sidebar() {
   })
   return (
 
-    <aside className="w-[240px] h-screen sticky top-0 bottom-0 left-0 z-[100] bg-cust-black overflow-auto">
+    <aside className="w-[240px] h-screen sticky top-0 bottom-0 left-0 z-[100] bg-cust-black overflow-auto shrink-0">
       {/* heading of sidebar */}
       <h1 className="text-cust-yellow mb-10 p-4">
         Xenpos

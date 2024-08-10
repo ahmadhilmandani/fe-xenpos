@@ -16,9 +16,9 @@ export default function Sales() {
     item: false,
   })
   return (
-    <div className="w-[80%] relative pb-8">
+    <>
       <Navbar />
-      <main className="px-10 mt-16">
+      <main className="pr-6 mt-16">
         <section className="mt-8">
           <div className="flex justify-between">
             <header>
@@ -62,7 +62,7 @@ export default function Sales() {
             </div>
           </div>
         </section>
-        <section className="mt-8 bg-white flex">
+        <section className="mt-8 bg-white flex max-w-full">
           {/* sub menu option of sales */}
           <div className="border-r w-[20%]">
             <div className={`${selectedSubMenu.sales ? 'bg-cust-gray' : 'hover:bg-cust-gray/20'} p-4 cursor-pointer`} onClick={() => {
@@ -183,26 +183,26 @@ export default function Sales() {
               "Gross Profit",
             ]}>
               <tr>
-                <td className="p-3 text-gray-700 whitespace-nowrap">
+                <td className="p-3 text-gray-700 w-96 whitespace-nowrap hyphens-auto">
                   Kring New Fit office chair, mesh + PU, black
                 </td>
-                <td className="p-3 text-gray-700 whitespace-nowrap">
+                <td className="p-3 text-gray-700">
                   Manis
                 </td>
-                <td className="p-3 text-gray-700 whitespace-nowrap">16</td>
-                <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 100.000.000</td>
-                <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 10.000</td>
-                <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 5.000</td>
-                <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 5.000</td>
-                <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 5.000</td>
-                <td className="p-3 text-gray-700 whitespace-nowrap">$200.00</td>
-                <td className="p-3 text-gray-700 whitespace-nowrap">$200.00</td>
+                <td className="p-3 text-gray-700">16</td>
+                <td className="p-3 text-gray-700">Rp. 100.000.000</td>
+                <td className="p-3 text-gray-700">Rp. 10.000</td>
+                <td className="p-3 text-gray-700">Rp. 5.000</td>
+                <td className="p-3 text-gray-700">Rp. 5.000</td>
+                <td className="p-3 text-gray-700">Rp. 5.000</td>
+                <td className="p-3 text-gray-700">$200.00</td>
+                <td className="p-3 text-gray-700">$200.00</td>
               </tr>
             </Table>
           </div>
         </section>
       </main>
-    </div>
+    </>
   )
 
 }

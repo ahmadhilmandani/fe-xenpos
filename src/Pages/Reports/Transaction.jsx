@@ -12,9 +12,9 @@ export default function Transaction() {
   })
 
   return (
-    <div className="w-[80%] relative pb-8">
+    <div className="bg-re">
       <Navbar />
-      <main className="px-10 mt-16">
+      <main className="pr-6 mt-16">
         <section className="mt-8">
           <div className="flex justify-between">
             <header>
@@ -101,7 +101,7 @@ export default function Transaction() {
             Transactions Table
           </h2>
           <Table tableHeader={[
-            "Date",	"Time",	"Receipt",	"Shift",	"Item",	"Total", "Price",	"Payment",	"Action"
+            "Date", "Time", "Receipt", "Shift", "Item", "Total", "Price", "Payment", "Action"
           ]}>
             <tr>
               <td className="p-3 text-gray-700 whitespace-nowrap">
@@ -116,7 +116,6 @@ export default function Transaction() {
               <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 5.000</td>
               <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 5.000</td>
               <td className="p-3 text-gray-700 whitespace-nowrap">Rp. 5.000</td>
-              <td className="p-3 text-gray-700 whitespace-nowrap">$200.00</td>
               <td className="p-3 text-gray-700 whitespace-nowrap">$200.00</td>
             </tr>
           </Table>

@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+  .main-container {
+    width: calc(100% - 264px);
+  }  
   * {
     @apply leading-[150%] text-cust-black;
   }

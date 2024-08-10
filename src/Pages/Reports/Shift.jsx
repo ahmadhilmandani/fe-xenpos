@@ -12,9 +12,9 @@ export default function Shift() {
   })
 
   return (
-    <div className="w-[80%] relative pb-8">
+    <>
       <Navbar />
-      <main className="px-10 mt-16">
+      <main className="pr-6 mt-16">
         <section className="mt-8">
           <div className="flex justify-between">
             <header>
@@ -84,6 +84,6 @@ export default function Shift() {
           </Table>
         </section>
       </main>
-    </div>
+    </>
   )
 }

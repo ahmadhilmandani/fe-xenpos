@@ -12,17 +12,17 @@ export default function ShiftByName() {
   })
 
   return (
-    <div className="w-[80%] relative pb-8">
+    <>
       <Navbar />
-      <main className="px-10 mt-16">
+      <main className="pr-6 mt-16">
         <section className="mt-8">
           <div className="flex justify-between">
             <header>
               <h1>
-              Shift By Cashier Name
+                Shift By Cashier Name
               </h1>
               <p className="text-cust-gray-darker">
-              You can see the shifts that have been made
+                You can see the shifts that have been made
               </p>
             </header>
             <div className="flex gap-3 items-center">
@@ -60,7 +60,7 @@ export default function ShiftByName() {
         </section>
         <section className="mt-8 bg-white p-6">
           <h2 className="mb-2">
-          Shift By Name Table
+            Shift By Name Table
           </h2>
           <Table tableHeader={[
             "Cashier Name", "Shift Count", "Action"
@@ -77,6 +77,6 @@ export default function ShiftByName() {
           </Table>
         </section>
       </main>
-    </div>
+    </>
   )
 }
