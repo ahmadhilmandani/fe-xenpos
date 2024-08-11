@@ -2,6 +2,7 @@ import { IconBrandMastercard, IconBuildingStore, IconCalendarFilled, IconCashReg
 import Navbar from "../components/Navbar";
 import Dropdown from "../components/Dropdown";
 import { useState } from "react";
+import { CartesianGrid, Line, LineChart, Tooltip, XAxis, YAxis, ResponsiveContainer, BarChart, Legend, Bar } from "recharts";
 
 export default function Dashboard() {
   const [openOutletOpt, setOpenOutletOpt] = useState(false)
@@ -9,11 +10,13 @@ export default function Dashboard() {
     value: 'Warteg_Bahari',
     name: 'Warteg Bahari'
   })
+  const data = [{ name: 'Page A', uv: 400 }, { name: 'Page B', uv: 100 }, { name: 'Page C', uv: 320 }, { name: 'Page D', uv: 210 }];
+  const data2 = [{ name: 'Kaos Kaki', quantity: 400 }, { name: 'SilverQueen', quantity: 100 }, { name: 'Le minerale', quantity: 320 }, { name: 'Susu Bender', quantity: 210 }];
 
   return (
-    <div className="w-[80%] relative pb-8">
+    <>
       <Navbar />
-      <main className="px-10 mt-16">
+      <main className="pr-6 mt-16 mb-12">
         <section className="mt-8">
           <div className="flex justify-between">
             <header>
@@ -95,8 +98,41 @@ export default function Dashboard() {
             </b>
           </div>
         </section>
+        <section className="bg-white mt-8 p-4">
+          <h2 className="mb-8">
+            Daily Gross Sales Amount
+          </h2>
+          <div className="h-72">
+            <ResponsiveContainer width={"100%"} height={"100%"}>
+              <LineChart data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
+                <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+                <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
+        </section>
+        <section className="bg-white mt-8 p-4">
+          <h2 className="mb-8">
+            Top Item
+          </h2>
+          <div className="h-72">
+            <ResponsiveContainer width={"100%"} height={"100%"}>
+              <BarChart width={730} height={250} data={data2}>
+                <CartesianGrid strokeDasharray="3 3" />
+                <XAxis dataKey="name" />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <Bar dataKey="quantity" fill="#82ca9d" />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+        </section>
       </main>
-    </div>
+    </>
   )
 
 }

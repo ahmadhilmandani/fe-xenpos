@@ -6,6 +6,9 @@
   .main-container {
     width: calc(100% - 264px);
   }  
+  .custom-height {
+    height: calc(100% - 72px);
+  }  
   * {
     @apply leading-[150%] text-cust-black;
   }
