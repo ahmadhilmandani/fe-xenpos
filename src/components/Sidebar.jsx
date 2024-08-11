@@ -113,7 +113,7 @@ export default function Sidebar() {
 
       {/* Sub-item of Libray (open only if sideItemOpen.library true) */}
       <div className={`${sideItemOpen.library ? 'h-[240px]' : 'h-0'} overflow-hidden transition-all`}>
-        <NavLink to="/sales" className={({ isActive }) =>
+        <NavLink to="/library/item" className={({ isActive }) =>
           isActive
             ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
             : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"

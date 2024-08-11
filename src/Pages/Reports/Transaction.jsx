@@ -12,7 +12,7 @@ export default function Transaction() {
   })
 
   return (
-    <div className="bg-re">
+    <div>
       <Navbar />
       <main className="pr-6 mt-16">
         <section className="mt-8">

@@ -104,8 +104,8 @@ export default function Dashboard() {
           </h2>
           <div className="h-72">
             <ResponsiveContainer width={"100%"} height={"100%"}>
-              <LineChart data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0 }}>
-                <Line type="monotone" dataKey="uv" stroke="#8884d8" />
+              <LineChart data={data}>
+                <Line type="monotone" dataKey="uv" stroke="#00ADB5" />
                 <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
                 <XAxis dataKey="name" />
                 <YAxis />
@@ -126,7 +126,7 @@ export default function Dashboard() {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="quantity" fill="#82ca9d" />
+                <Bar dataKey="quantity" fill="#00ADB5" />
               </BarChart>
             </ResponsiveContainer>
           </div>
