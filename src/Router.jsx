@@ -10,6 +10,7 @@ import Item from "./Pages/Library/Item";
 import Category from "./Pages/Library/Category";
 import Modifier from "./Pages/Library/Modifier";
 import Discount from "./Pages/Library/Discount";
+import SalesType from "./Pages/Library/SalesType";
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/library/discount",
         element: <Discount />,
+      },
+      {
+        path: "/library/sales-type",
+        element: <SalesType />,
       },
     ]
   },
