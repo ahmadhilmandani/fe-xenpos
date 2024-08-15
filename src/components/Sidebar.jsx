@@ -132,7 +132,7 @@ export default function Sidebar() {
             Modifier
           </div>
         </NavLink>
-        <NavLink to="/sales" className={({ isActive }) =>
+        <NavLink to="/library/discount" className={({ isActive }) =>
           isActive
             ? "bg-cust-black-darker px-[2px] block py-4"
             : "hover:bg-cust-black-darker/50 px-[2px] block py-4"}>
