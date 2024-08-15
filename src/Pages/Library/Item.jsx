@@ -1,9 +1,12 @@
-import { IconBuildingStore, IconPlus, IconX } from "@tabler/icons-react";
+import { IconBuildingStore, IconPlus } from "@tabler/icons-react";
 import Navbar from "../../components/Navbar";
 import Dropdown from "../../components/Dropdown";
 import { useState } from "react";
 import Table from "../../components/Table";
 import Button from "../../components/Button";
+import SidebarAddItem from "../../components/Library/SidebarAddItem";
+import { toggle } from "../../store/features/openSidebarAddSlic";
+import {  useDispatch } from "react-redux";
 
 export default function Item() {
   const [openOutletOpt, setOpenOutletOpt] = useState(false)
@@ -11,12 +14,11 @@ export default function Item() {
     value: 'Warteg_Bahari',
     name: 'Warteg Bahari'
   })
-  const [openSide, setOpenSide] = useState(false)
-
+  const dispatch = useDispatch()
   return (
     <>
       <Navbar />
-      <div className="flex h-[calc(100%-60px)]">
+      <div className="flex">
         <main className="pr-6 mt-16 flex-1 overflow-x-auto">
           <section className="mt-8">
             <div className="flex justify-between">
@@ -54,7 +56,7 @@ export default function Item() {
                     />
                   </div>
                 </div>
-                <Button clickAction={() => { setOpenSide(!openSide) }}>
+                <Button clickAction={() => { dispatch(toggle()) }}>
                   Create Item
                   <IconPlus size={20} className="stroke-cust-black" />
                 </Button>
@@ -83,20 +85,7 @@ export default function Item() {
             </Table>
           </section>
         </main>
-        <aside className={`${openSide ? 'w-[400px]' : 'w-[0px] p-0'} relative z-40 bg-cust-gray block p-6 transition-all overflow-hidden`}>
-          <div className="flex justify-between items-center mb-2">
-            <h2>
-              Create Item
-            </h2>
-            <IconX onClick={() => { setOpenSide(false) }} className="hover:cursor-pointer" />
-          </div>
-          <div className="absolute bottom-6 right-6">
-            <Button>
-              Save
-            </Button>
-          </div>
-
-        </aside>
+        <SidebarAddItem />
       </div>
     </>
   )

@@ -1,4 +1,4 @@
-import { IconBookFilled, IconCalendarFilled, IconChevronRight, IconLayoutDashboardFilled, IconPointFilled } from "@tabler/icons-react"
+import { IconBookFilled, IconCalendarFilled, IconChevronRight, IconLayoutDashboardFilled } from "@tabler/icons-react"
 import { useState } from 'react'
 import { NavLink } from "react-router-dom"
 
@@ -48,51 +48,46 @@ export default function Sidebar() {
       <div className={`${sideItemOpen.report ? 'h-[260px]' : 'h-0'} overflow-hidden transition-all`}>
         <NavLink to="/sales" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"
         }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+          <div className="text-cust-gray translate-x-20">
             Sales
           </div>
         </NavLink>
         <NavLink to="/transaction" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"
         }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+          <div className="text-cust-gray translate-x-20">
             Transaction
           </div>
         </NavLink>
         <NavLink to="/refund" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"
         }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+          <div className="text-cust-gray translate-x-20">
             Refund
           </div>
         </NavLink>
         <NavLink to="/shift" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"
         }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+          <div className="text-cust-gray translate-x-20">
             Shift
           </div>
         </NavLink>
         <NavLink to="/shift-by-name" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"
         }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+          <div className="text-cust-gray translate-x-20">
             Shift By Name
           </div>
         </NavLink>
@@ -112,64 +107,52 @@ export default function Sidebar() {
       </button>
 
       {/* Sub-item of Libray (open only if sideItemOpen.library true) */}
-      <div className={`${sideItemOpen.library ? 'h-[240px]' : 'h-0'} overflow-hidden transition-all`}>
+      <div className={`${sideItemOpen.library ? 'h-[320px]' : 'h-0'} overflow-hidden transition-all`}>
         <NavLink to="/library/item" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
-        }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"}>
+          <div className="text-cust-gray translate-x-20">
             Item Library
           </div>
         </NavLink>
         <NavLink to="/sales" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
-        }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"}>
+          <div className="text-cust-gray translate-x-20">
             Category
           </div>
         </NavLink>
         <NavLink to="/sales" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
-        }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"}>
+          <div className="text-cust-gray translate-x-20">
             Modifier
           </div>
         </NavLink>
         <NavLink to="/sales" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
-        }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"}>
+          <div className="text-cust-gray translate-x-20">
             Discount
           </div>
         </NavLink>
         <NavLink to="/sales" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
-        }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"}>
+          <div className="text-cust-gray translate-x-20">
             Sales Type
           </div>
         </NavLink>
         <NavLink to="/sales" className={({ isActive }) =>
           isActive
-            ? "bg-cust-black-darker flex items-center gap-6 px-4 py-4"
-            : "hover:bg-cust-black-darker/50 flex items-center gap-6 px-4 py-4"
-        }>
-          <IconPointFilled stroke={1.5} className=" fill-cust-gray w-[24px]" size={16} />
-          <div className="text-cust-gray">
+            ? "bg-cust-black-darker px-[2px] block py-4"
+            : "hover:bg-cust-black-darker/50 px-[2px] block py-4"}>
+          <div className="text-cust-gray translate-x-20">
             Tax
           </div>
         </NavLink>
