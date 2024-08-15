@@ -116,7 +116,7 @@ export default function Sidebar() {
             Item Library
           </div>
         </NavLink>
-        <NavLink to="/sales" className={({ isActive }) =>
+        <NavLink to="/library/category" className={({ isActive }) =>
           isActive
             ? "bg-cust-black-darker px-[2px] block py-4"
             : "hover:bg-cust-black-darker/50 px-[2px] block py-4"}>
@@ -124,7 +124,7 @@ export default function Sidebar() {
             Category
           </div>
         </NavLink>
-        <NavLink to="/sales" className={({ isActive }) =>
+        <NavLink to="/library/modifier" className={({ isActive }) =>
           isActive
             ? "bg-cust-black-darker px-[2px] block py-4"
             : "hover:bg-cust-black-darker/50 px-[2px] block py-4"}>

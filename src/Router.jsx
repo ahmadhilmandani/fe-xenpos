@@ -7,6 +7,7 @@ import Refund from "./Pages/Reports/Refund";
 import Shift from "./Pages/Reports/Shift";
 import ShiftByName from "./Pages/Reports/ShiftByName";
 import Item from "./Pages/Library/Item";
+import Category from "./Pages/Library/Category";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/library/item",
         element: <Item />,
+      },
+      {
+        path: "/library/category",
+        element: <Category />,
       },
     ]
   },
