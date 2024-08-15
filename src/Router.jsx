@@ -11,6 +11,7 @@ import Category from "./Pages/Library/Category";
 import Modifier from "./Pages/Library/Modifier";
 import Discount from "./Pages/Library/Discount";
 import SalesType from "./Pages/Library/SalesType";
+import Tax from "./Pages/Library/Tax";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "/library/sales-type",
         element: <SalesType />,
+      },
+      {
+        path: "/library/Tax",
+        element: <Tax />,
       },
     ]
   },
