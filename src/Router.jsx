@@ -12,6 +12,9 @@ import Modifier from "./Pages/Library/Modifier";
 import Discount from "./Pages/Library/Discount";
 import SalesType from "./Pages/Library/SalesType";
 import Tax from "./Pages/Library/Tax";
+import AuthLayout from "./layouts/AuthLayout";
+import Login from "./Pages/Auth/Login";
+import Register from "./Pages/Auth/Register";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +71,20 @@ const router = createBrowserRouter([
       },
     ]
   },
+  {
+    path: '/auth/',
+    element: <AuthLayout />,
+    children: [
+      {
+        path: 'login',
+        element: <Login />
+      },
+      {
+        path: 'register',
+        element: <Register />
+      },
+    ]
+  }
 ]);
 
 export default router
